@@ -12,17 +12,20 @@
 	<!------------------------>
 	<script type="text/babel">
 	class Rigged extends React.Component {
-		constructor() {
-			super();
-			this.state={garbage: "쓰레기통"};
+		constructor(props) {
+			super(props);
+			this.state={cold: "냉장고"};
 		}
-			render() {
-				return (
-					<h1>부정선거하는 나라들은 결국<br /><b className="red">{this.state.garbage}</b> 뒤지며 살게 된다.</h1>	  
-				);
-			}
+		static getDerivedStateFromProps(props,state){
+			return {cold:props.garbage}
+		}
+		render() {
+			return (
+				<h1>부정선거 방관하는 나라들은 결국<br /><b className="red">{this.state.cold}</b> 뒤지며 살게 된다.</h1>	  
+			);
+		}
 	}
-	ReactDOM.render(<Rigged />, document.getElementById('root'));
+	ReactDOM.render(<Rigged garbage="쓰레기통" />, document.getElementById('root'));
 	</script>
   </body>
 </html>
