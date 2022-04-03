@@ -22,12 +22,12 @@
 											{id:3, el:"공개하라"}
 										]
 			return (
-				<>
+				<section>
 					<h1>자유민주주의를 지키려면?</h1>
 					<ul>
 						{items.map((ele) => <Rigged key={ele.id} election={ele.el}  />)}
 					</ul>
-				</>
+				</section>
 			);
 		}
 		ReactDOM.render(<RiEl />, document.getElementById('root'));
