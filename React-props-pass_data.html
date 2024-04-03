@@ -25,7 +25,8 @@
 		)
 	}
 
-	ReactDOM.render(<Rigged />, document.getElementById('root'));
+	const root = ReactDOM.createRoot( document.getElementById('root') ); //표시할 컴포넌트의 위치
+	root.render( <Rigged /> );
 	</script>
   </body>
 </html>
